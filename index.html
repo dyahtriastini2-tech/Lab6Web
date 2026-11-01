@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop Web Development</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 id="judul">Workshop Web Development</h1>
+      <p id="pesan">Belajar Interaktif JavaScript DOM</p>
+      <button id="tombolAksi" type="button">Lihat Waktu Sekarang</button>
+    </header>
+
+    <section class="card">
+      <h2>Mode Tampilan</h2>
+      <p id="teksGaya">Klik tombol untuk mengubah tampilan paragraf ini menjadi mode highlight.</p>
+      <button id="tombolGaya" type="button">Ganti Mode Tampilan</button>
+    </section>
+
+    <section class="card">
+      <h2>Pendaftaran Peserta</h2>
+      <label for="namaInput">Nama Panggilan (Live Counter)</label>
+      <input type="text" id="namaInput" maxlength="40" placeholder="Ketik nama...">
+      <p class="small">Jumlah karakter: <span id="jumlahKarakter">0</span>/40</p>
+
+      <form id="formPendaftaran" novalidate>
+        <label for="nama">Nama Lengkap</label>
+        <input id="nama" type="text" placeholder="Contoh: Dyahta">
+        
+        <label for="email">Email Aktif</label>
+        <input id="email" type="email" placeholder="email@contoh.com">
+        
+        <label for="usia">Usia</label>
+        <input id="usia" type="number" placeholder="17-100">
+        
+        <div class="actions">
+          <button type="submit">Daftar Sekarang</button>
+          <button type="button" id="resetForm" class="secondary">Reset</button>
+        </div>
+      </form>
+      <p id="pesanForm"></p>
+    </section>
+
+    <section class="card">
+      <h2>Catatan Persiapan</h2>
+      <div class="todo-input">
+        <input id="inputTugas" type="text" placeholder="Tulis yang perlu disiapkan...">
+        <button id="tambahTugas" type="button">Tambah</button>
+      </div>
+      <p id="pesanTugas"></p>
+      <ul id="daftarTugas"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Pilih Sesi Workshop</h2>
+      <form id="formWorkshop" novalidate>
+        <label for="wsNama">Nama Peserta</label>
+        <input id="wsNama" type="text">
+        <label for="wsEmail">Email</label>
+        <input id="wsEmail" type="email">
+        <label for="wsSesi">Sesi</label>
+        <select id="wsSesi">
+          <option value="">-- Pilih Sesi --</option>
+          <option value="Pagi - Frontend">Pagi - Frontend Dasar</option>
+          <option value="Siang - Backend">Siang - Backend Logic</option>
+          <option value="Sore - Fullstack">Sore - Fullstack Project</option>
+        </select>
+        <p class="small">Sesi terpilih: <span id="infoSesi">Belum memilih</span></p>
+        <button type="submit">Konfirmasi Sesi</button>
+      </form>
+      <p id="pesanWorkshop"></p>
+    </section>
+
+  </div>
+</body>
+</html>
